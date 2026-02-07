@@ -7,12 +7,12 @@ export function HeroSection() {
   return (<>
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Gradient Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 bottom-[-25%] z-0">
         <img
-          src="https://images.unsplash.com/photo-1600596542815-3ad19d6f67f5?auto=format&fit=crop&q=80"
+          src="/images/Gemini_Generated_Image_i2ls7i2ls7i2ls7i.png"
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover" />
+          className="w-full h-full object-cover object-top" />
 
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
         <div className="absolute inset-0 bg-black/20" />
@@ -37,7 +37,7 @@ export function HeroSection() {
 
             <span className="w-8 h-[1px] bg-accent" />
             <span className="text-white/90 text-sm font-medium tracking-wide">
-              Trusted by 500+ Canadian Homeowners
+              North York's Trusted Lawn Care Team
             </span>
           </motion.div>
 
@@ -76,10 +76,10 @@ export function HeroSection() {
             }}
             className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl leading-relaxed">
 
-            Professional lawn care and landscaping for busy homeowners who value
-            their weekends. From weekly mowing to seasonal cleanups, we handle
-            everything so you can enjoy the pride of a beautiful yard — and the
-            peace of mind that comes with it.
+            Professional lawn care and landscaping for busy North York homeowners
+            who value their weekends. From weekly mowing to seasonal cleanups, we
+            handle everything so you can enjoy the pride of a beautiful yard — and
+            the peace of mind that comes with it.
           </motion.p>
 
           {/* CTAs */}
@@ -133,7 +133,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5 text-accent" />
-              <span>5-Star Rated</span>
+              <span>Satisfaction Guaranteed</span>
             </div>
           </motion.div>
         </div>

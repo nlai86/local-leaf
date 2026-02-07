@@ -4,18 +4,18 @@ export function Footer() {
   return (
     <footer className="bg-primary text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-12 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Brand Column */}
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Leaf className="h-6 w-6 text-white" />
               <span className="font-serif text-xl font-semibold tracking-tight">
-                GreenScape
+                LocalLeaf Landscaping
               </span>
             </div>
             <p className="text-white/70 mb-6 leading-relaxed">
-              Professional lawn care and landscaping for Canadian homeowners who
-              value quality, reliability, and the pride of a beautiful property.
+              Professional lawn care and landscaping for North York homeowners
+              who value quality, reliability, and the pride of a beautiful property.
             </p>
             <p className="text-sm text-white/50">
               Fully insured • Locally owned • Proudly serving our community
@@ -28,10 +28,10 @@ export function Footer() {
               Service Areas
             </h3>
             <ul className="space-y-3 text-white/70">
-              <li>Greater Toronto Area</li>
-              <li>Vancouver & Lower Mainland</li>
-              <li>Calgary & Edmonton</li>
-              <li>Ottawa & Surrounding</li>
+              <li>North York</li>
+              <li>Willowdale</li>
+              <li>Don Mills</li>
+              <li>York Mills & Surrounding</li>
             </ul>
           </div>
 
@@ -43,22 +43,22 @@ export function Footer() {
             <ul className="space-y-4 text-white/70">
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent" />
-                <span>(555) 123-4567</span>
+                <a href="tel:+16475749625" className="hover:text-white transition-colors">(647) 574-9625</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent" />
-                <span>localleaflandscape@gmail.com</span>
+                <a href="mailto:localleaflandscape@gmail.com" className="hover:text-white transition-colors">localleaflandscape@gmail.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-accent" />
-                <span>Serving homes across Canada</span>
+                <span>Serving North York, Toronto, ON</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
-          <p>© 2025 GreenScape Lawn Care. All rights reserved.</p>
+          <p>© 2026 LocalLeaf Landscaping. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy

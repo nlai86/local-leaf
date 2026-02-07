@@ -1,22 +1,25 @@
 import React from 'react';
-import { Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Heart, Clock, ThumbsUp } from 'lucide-react';
 export function Testimonials() {
-  const testimonials = [
+  const promises = [
   {
-    text: "We've used LocalLeaf for two seasons now, and our lawn has never looked better. They're reliable, professional, and genuinely care about the quality of their work.",
-    author: 'Sarah M.',
-    location: 'North York'
+    icon: Heart,
+    title: 'We Treat Your Lawn Like Our Own',
+    description:
+      'Every property gets our full attention and care. We take pride in delivering results that make you proud to come home.'
   },
   {
-    text: "I used to spend every Saturday morning on yard work. Now I spend it with my family. Best decision we've made for our home.",
-    author: 'David K.',
-    location: 'Scarborough'
+    icon: Clock,
+    title: 'Reliable, On-Time Service',
+    description:
+      'We show up when we say we will. No chasing, no excuses — just consistent, dependable lawn care you can count on.'
   },
   {
-    text: 'The seasonal cleanup service is incredible. Our property looks magazine-ready after every visit. Highly recommend to any homeowner in the GTA.',
-    author: 'Priya R.',
-    location: 'Mississauga'
+    icon: ThumbsUp,
+    title: '100% Satisfaction Guaranteed',
+    description:
+      "Not happy with a visit? We'll come back and make it right — no questions asked. Your satisfaction is our reputation."
   }];
 
   return (
@@ -24,15 +27,15 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-primary font-bold tracking-widest text-sm uppercase mb-4 block">
-            What Our Clients Say
+            Why Choose Us
           </span>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900">
-            Trusted by Homeowners Across Toronto
+            Our Promise to Every Homeowner
           </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((item, index) =>
+          {promises.map((item, index) =>
           <motion.div
             key={index}
             initial={{
@@ -52,18 +55,15 @@ export function Testimonials() {
             }}
             className="bg-sage-50 p-8 rounded-xl relative">
 
-              <div className="flex gap-1 mb-6">
-                {[...Array(5)].map((_, i) =>
-              <Star key={i} className="w-5 h-5 text-accent fill-accent" />
-              )}
+              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                <item.icon className="w-6 h-6 text-primary" />
               </div>
-              <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
-                "{item.text}"
+              <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {item.description}
               </p>
-              <div>
-                <p className="font-bold text-gray-900">{item.author}</p>
-                <p className="text-sm text-gray-500">{item.location}</p>
-              </div>
             </motion.div>
           )}
         </div>

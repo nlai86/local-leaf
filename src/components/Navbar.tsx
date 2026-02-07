@@ -62,7 +62,7 @@ export function Navbar() {
             )}
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="bg-primary hover:bg-primary-light text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors shadow-lg hover:shadow-xl">
+              className="bg-primary hover:bg-primary-light text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors shadow-lg hover:shadow-xl">
               Get Free Quote
             </button>
           </div>

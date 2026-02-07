@@ -12,7 +12,7 @@ export function TrustStrip() {
   },
   {
     icon: Star,
-    text: '5-Star Google Rating'
+    text: 'Satisfaction Guaranteed'
   },
   {
     icon: Leaf,
