@@ -51,7 +51,7 @@ export function ServicesSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) =>
+          {services.slice(0, 3).map((service, index) =>
           <motion.div
             key={index}
             initial={{
@@ -68,6 +68,39 @@ export function ServicesSection() {
             transition={{
               duration: 0.5,
               delay: index * 0.1
+            }}
+            className="bg-white p-8 rounded-xl border border-sage-100 hover:shadow-lg transition-shadow duration-300">
+
+              <div className="bg-sage-50 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                <service.icon className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {service.description}
+              </p>
+            </motion.div>
+          )}
+        </div>
+        <div className="grid md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
+          {services.slice(3).map((service, index) =>
+          <motion.div
+            key={index + 3}
+            initial={{
+              opacity: 0,
+              y: 20
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
+            viewport={{
+              once: true
+            }}
+            transition={{
+              duration: 0.5,
+              delay: (index + 3) * 0.1
             }}
             className="bg-white p-8 rounded-xl border border-sage-100 hover:shadow-lg transition-shadow duration-300">
 

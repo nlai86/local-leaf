@@ -23,8 +23,8 @@ export function Navbar() {
     href: '#how-it-works'
   },
   {
-    name: 'Testimonials',
-    href: '#testimonials'
+    name: 'Why Choose Us',
+    href: '#why-choose-us'
   },
   {
     name: 'Contact',
