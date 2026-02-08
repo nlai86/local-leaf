@@ -9,7 +9,7 @@ export function HeroSection() {
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 bottom-[-25%] z-0">
         <img
-          src="/images/Gemini_Generated_Image_i2ls7i2ls7i2ls7i.png"
+          src={`${import.meta.env.BASE_URL}images/hero_backdrop.png`}
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover object-top" />
