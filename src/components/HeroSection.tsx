@@ -57,7 +57,7 @@ export function HeroSection() {
             }}
             className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6">
 
-            The Lawn You've Always Wanted — Without Lifting a Finger
+            The Lawn You've Always Wanted, Without Lifting a Finger
           </motion.h1>
 
           {/* Subheadline */}
