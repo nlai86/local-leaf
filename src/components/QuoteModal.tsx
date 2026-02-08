@@ -28,6 +28,7 @@ const SERVICE_OPTIONS = [
   'Garden Maintenance',
   'Hedge Trimming',
   'Lawn Treatment',
+  'Snow Removal',
 ];
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
@@ -138,7 +139,7 @@ export function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden"
+            className="relative rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden"
           >
             {/* Header with green accent bar */}
             <div className="bg-primary px-6 sm:px-8 py-5 relative overflow-hidden">
@@ -169,7 +170,7 @@ export function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             </div>
 
             {/* Scrollable content */}
-            <div className="overflow-y-auto max-h-[calc(90vh-88px)]">
+            <div className="overflow-y-auto max-h-[calc(90vh-88px)] bg-white">
               <div className="p-6 sm:p-8">
                 {formStatus === 'success' ? (
                   <motion.div
