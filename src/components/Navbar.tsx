@@ -86,45 +86,57 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen &&
-        <motion.div
-          initial={{
-            opacity: 0,
-            height: 0
-          }}
-          animate={{
-            opacity: 1,
-            height: 'auto'
-          }}
-          exit={{
-            opacity: 0,
-            height: 0
-          }}
-          className="md:hidden bg-white border-t border-gray-100">
+    </nav>
 
-            <div className="px-4 py-6 space-y-4">
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && <>
+        {/* Backdrop */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="md:hidden fixed inset-0 z-50 bg-black/40"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+        {/* Drawer */}
+        <motion.div
+          initial={{ x: '100%' }}
+          animate={{ x: 0 }}
+          exit={{ x: '100%' }}
+          transition={{ type: 'tween', duration: 0.3, ease: 'easeInOut' }}
+          className="md:hidden fixed top-0 right-0 bottom-0 z-50 w-64 bg-white shadow-xl">
+
+            {/* Close button */}
+            <div className="flex justify-end px-4 py-6">
+              <button
+                className="p-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu">
+                <X className="h-6 w-6 text-gray-900" />
+              </button>
+            </div>
+
+            <div className="px-6 pt-2 space-y-6 text-right">
               {navLinks.map((link) =>
             <a
               key={link.name}
               href={link.href}
-              className="block text-base font-medium text-gray-900 hover:text-primary"
+              className="block text-lg font-medium text-gray-900 hover:text-primary"
               onClick={() => setIsMobileMenuOpen(false)}>
-
                   {link.name}
                 </a>
             )}
               <button
                 onClick={() => { setIsMobileMenuOpen(false); setIsQuoteOpen(true); }}
-                className="w-full bg-primary text-white px-6 py-3 rounded-lg text-base font-medium">
+                className="bg-primary text-white px-6 py-3 rounded-lg text-base font-medium mt-4">
                 Get Free Quote
               </button>
             </div>
           </motion.div>
-        }
+        </>}
       </AnimatePresence>
-    </nav>
     <QuoteModal isOpen={isQuoteOpen} onClose={() => setIsQuoteOpen(false)} />
     </>);
 
